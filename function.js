@@ -1,5 +1,3 @@
-
-
 // normal id get
 function getIdItem(id){
     return document.getElementById(id);
@@ -15,8 +13,6 @@ function getClassItem(clas) {
 // normal class get
 
 
-
-
 // inputValueInNumber
 function getInputNumberValue(id) {
     
@@ -26,20 +22,6 @@ function getInputNumberValue(id) {
  };
  // inputValueInNumber
  
-
-
- // hiddAllShow1
-function hiddAllShow1(classs, num) {
-    const className = getClassItem(classs);
-
-    for (let i = 0; i < className.length; i++) {
-        className[i].classList.add('hidden');
-    };
-    
-    className[num].classList.remove('hidden');
-};
-// hiddAllShow1
-
 
 //createElements
 function createElements(id, donateAmount, placeName) {

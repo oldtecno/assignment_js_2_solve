@@ -1,3 +1,4 @@
+//
 getIdItem('donateBtnEfect').addEventListener('click', function (e) {
     getIdItem('DonationSection').classList.remove('hidden');
     getIdItem('header').classList.remove('hidden');
@@ -15,7 +16,7 @@ getIdItem('histryBtnEfect').addEventListener('click', function (e) {
 
     getIdItem('fullMarkup').classList.add('bg-[#dcdcdc]')
 });
-
+// 
 
 
 
@@ -38,6 +39,9 @@ getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
         getIdItem('noakhaliDonateValue').value='';
 
         createElements('donateHistryCards', donateAmount, 'Noakhali' );
+
+        getIdItem('SuccessfulAlert').classList.remove('hidden');
+        getIdItem('blur').classList.add('blur-sm');
     }
     else{
         alert('Opps! Somthing is wrong');
@@ -66,6 +70,8 @@ getIdItem('donateFeniBtn').addEventListener('click' ,function (e) {
 
         createElements('donateHistryCards', donateAmount, 'Feni' );
 
+        getIdItem('SuccessfulAlert').classList.remove('hidden');
+        getIdItem('blur').classList.add('blur-sm');
     }
     else{
         alert('Opps! Somthing is wrong');
@@ -94,9 +100,25 @@ getIdItem('donateQuotaBtn').addEventListener('click' ,function (e) {
 
         createElements('donateHistryCards', donateAmount, 'Aid for Injured in the Quota Movement' );
 
+        getIdItem('SuccessfulAlert').classList.remove('hidden');
+        getIdItem('blur').classList.add('blur-sm');
+
     }
     else{
         alert('Opps! Somthing is wrong');
     }
 });
 //btn3
+
+
+
+
+
+
+
+// Successful alert
+getIdItem('successfulBtn').addEventListener('click', function (e) {
+    getIdItem('SuccessfulAlert').classList.add('hidden');
+    getIdItem('blur').classList.remove('blur-sm');
+});
+// Successful alert
