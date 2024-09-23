@@ -1,18 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment_js_2_solve</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--  -->
-    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
 
+    <header id="header" class="">
+        <div class="w-full backdrop-blur-md bg-[#bbb5b571] fixed top-0 z-50">
+            <nav class="w-[95%] mx-auto">
+                <ul class="flex h-24 items-center justify-between">
+                    <li class="hidden lg:inline lg:text-lg lg:font-bold bg-[#69ff24] lg:py-3 py-2 lg:px-8 px-5 rounded-lg"><a id="">Blog</a></li>
+                    <li class="flex items-center gap-4 lg:text-xl font-bold"><img src="./assets/logo.png" alt=""> Donate Bangladesh</li>
+                    
+                    <li class="lg:hidden">
+                      
+                      <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn m-1"><i class="fa-solid fa-user z-50"></i></div>
+                        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 bg-gray-100 shadow-[#474747] shadow-lg">
+                          <li class="flex items-center justify-center text-lg flex-row text-gray-900 border-b-2 border-[#69ff24] mb-5 font-extrabold w-full "><h1 id="curentBalanceForPhone">500</h1>BDT<img src="./assets/coin.png" alt=""></li>
+                          <li class="font-semibold  bg-[#69ff24]  py-2  px-5 rounded-lg"><a id="" class=" flex justify-center">Blog</a></li>
+                        </ul>
+                      </div>
+                    
+                    </li>
+                    <li class="hidden lg:flex items-center gap-2 text-lg text-gray-100 bg-gray-400 p-2 rounded-lg font-bold"><img src="./assets/coin.png" alt=""> <h1 id="curentBalance">500</h1>BDT</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
+    <main>
+        <!-- donate page -->
+        <section id="DonationSection" class="">
+            <section class="">
+                <div class="mt-[120px] flex gap-10 justify-center items-center">
+                    <button class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Donate</button>
+                    <button id="histryBtnEfect" class="bg-[#9f9f9f] hover:bg-[#e0e0e0] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Histry</button>
+                </div>
+            </section>
+
+            <section class="mt-8 w-[90%] mx-auto ">
+
+                <div class="bg-[#ebebeb] card lg:card-side bg-base-100 shadow-[#5c5c5c] shadow-xl w-full">
+                    <figure class="lg:w-[50%] lg:py-5 lg:pl-8 ">
+                      <img class="" src="./assets/noakhali.png" alt="Album" />
+                    </figure>
+    
+                    <div class="card-body lg:p-8 p-5 lg:w-[50%]">
+                        
+                        <div class="flex gap-2 bg-gray-300 p-2 rounded-lg w-fit"><img src="./assets/coin.png" alt=""> <h1 id="noakhaliReserve" class="lg:text-lg lg:font-bold">2400 </h1><h1 class="lg:text-lg lg:font-bold">BDT</h1></div>
+    
+                      <h1 class="card-title lg:text-2xl lg:font-extrabold">Donate for Flood at Noakhali, Bangladesh</h1>
+                      <p class="font-semibold">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                      <input type="text" autocomplete="off" placeholder="Write Donation Amount" id="noakhaliDonateValue" class="w-full input input-bordered input-error focus:outline-none border-none bg-gray-300 placeholder:text-gray-600 lg:placeholder:font-medium text-sm lg:text-lg mt-5" />
+                      
+    
+                      <div class="w-full card-actions justify-end">
+                        <button id="noakhaliDonateBtn" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black lg:font-bold lg:text-lg w-full border-none btn btn-primary">Donate Now</button>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                <div class="bg-[#ebebeb] mt-16 card lg:card-side bg-base-100 shadow-[#5c5c5c] shadow-xl w-full">
+                    <figure class="lg:w-[50%] lg:py-5 lg:pl-8">
+                      <img class="" src="./assets/feni.png" alt="Album" />
+                    </figure>
+    
+                    <div class="card-body lg:p-8 p-5 lg:w-[50%]">
+                        
+                        <div class="flex gap-2 bg-gray-300 p-2 rounded-lg w-fit"><img src="./assets/coin.png" alt=""> <h1 id="feniReserve" class="lg:text-lg lg:font-bold">2400</h1><h1 class="lg:text-lg lg:font-bold">BDT</h1> </div>
+    
+                      <h1 class="card-title lg:text-2xl lg:font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                      <p class="lg:font-semibold">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                      <input type="text" placeholder="Write Donation Amount" id="feniDonateValue" class="w-full input input-bordered input-error focus:outline-none border-none bg-gray-300 placeholder:text-gray-600 lg:placeholder:font-medium text-sm lg:text-lg mt-5" />
+                      
+                      <div class="w-full card-actions justify-end">
+                        <button id="donateFeniBtn" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black lg:font-bold lg:text-lg w-full border-none btn btn-primary">Donate Now</button>
+                      </div>
+                    </div>
+    
+                  </div>
+    
+                <div class="mb-6 bg-[#ebebeb] mt-16 card lg:card-side bg-base-100 shadow-xl shadow-[#5c5c5c] w-full">
+                    <figure class="lg:w-[50%] lg:py-5 lg:pl-8">
+                      <img class="" src="./assets/quota-protest.png" alt="Album" />
+                    </figure>
+    
+                    <div class="card-body lg:p-8 p-5 lg:w-[50%]">
+                        
+                        <div class="flex gap-2 bg-gray-300 p-2 rounded-lg w-fit"><img src="./assets/coin.png" alt=""> <h1 id="quotaReserve" class="lg:text-lg lg:font-bold">2400</h1><h1 class="lg:text-lg lg:font-bold">BDT</h1> </div>
+    
+                      <h1 class="card-title lg:text-2xl lg:font-extrabold">Aid for Injured in the Quota Movement</h1>
+                      <p class="lg:font-semibold">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                      <input type="text" placeholder="Write Donation Amount" id="quotaDonateValue" class="w-full input input-bordered input-error focus:outline-none border-none bg-gray-300 placeholder:text-gray-600 lg:placeholder:font-medium lg:text-lg text-sm mt-5" />
+    
+                      <div class="w-full card-actions justify-end">
+                        <button id="donateQuotaBtn" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black lg:font-bold lg:text-lg w-full border-none btn btn-primary">Donate Now</button>
+                      </div>
+                    </div>
+    
+                  </div>
+            </section>
+        </section>
+        <!-- donate page -->
+
+
+
+
+
+        <!-- histry page -->
+        <section id="HistorySection" class="hidden">
+
+            
+    <header id="header" class="">
+        <div class="w-full backdrop-blur-md bg-[#bbb5b571] fixed top-0 z-50">
+            <nav class="w-[95%] mx-auto">
+                <ul class="flex h-24 items-center justify-between">
+                    <li class="hidden lg:inline lg:text-lg lg:font-bold bg-[#69ff24] lg:py-3 py-2 lg:px-8 px-5 rounded-lg"><a id="">Blog</a></li>
+                    <li class="flex items-center gap-4 lg:text-xl font-bold"><img src="./assets/logo.png" alt=""> Donate Bangladesh</li>
+                    
+                    <li class="lg:hidden">
+                      
+                      <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn m-1"><i class="fa-solid fa-user z-50"></i></div>
+                        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 bg-gray-100 shadow-[#474747] shadow-lg">
+                          <li class="flex items-center justify-center text-lg flex-row text-gray-900 border-b-2 border-[#69ff24] mb-5 font-extrabold w-full "><h1 id="histrycurentBalanceForPhone">500</h1>BDT<img src="./assets/coin.png" alt=""></li>
+                          <li class="font-semibold  bg-[#69ff24]  py-2  px-5 rounded-lg"><a id="" class=" flex justify-center">Blog</a></li>
+                        </ul>
+                      </div>
+                    
+                    </li>
+                    <li class="hidden lg:flex items-center gap-2 text-lg text-gray-100 bg-gray-400 p-2 rounded-lg font-bold"><img src="./assets/coin.png" alt=""> <h1 id="histryInbalance">500</h1>BDT</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+            <section class="w-[80%] mx-auto ">
+                    <section class="mt-[120px] flex gap-10 justify-center items-center">
+                        <button id="donateBtnEfect" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Donate</button>
+                        <button id="histryBtnEfect" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Histry</button>
+                    </section>
+    
+                    <div class="mt-10 p-5 border-2 border-gray-200 rounded-lg">
+                        <h1 class="lg:text-xl font-semibold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
+                        <p class="lg:font-light mt-3 lg:text-start text-center">12/4/2004</p>
+                    </div>
+            </section>
+        </section>
+        <!-- histry page -->
+    </main>
 
 
     <script src="function.js"></script>
