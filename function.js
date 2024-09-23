@@ -28,7 +28,6 @@ function getInputNumberValue(id) {
  
 
 
-
  // hiddAllShow1
 function hiddAllShow1(classs, num) {
     const className = getClassItem(classs);
@@ -40,3 +39,19 @@ function hiddAllShow1(classs, num) {
     className[num].classList.remove('hidden');
 };
 // hiddAllShow1
+
+
+//createElements
+function createElements(id, donateAmount, placeName) {
+
+    const div = document.createElement('div');
+    div.classList.add('mt-5', 'p-5', 'rounded-lg', 'bg-white');
+    div.innerHTML=`
+                         <h1 class="lg:text-xl font-semibold"> <span class="text-black font-bold">${donateAmount}</span>  Taka is Donated for famine-2024 at <span class="text-black font-bold">${placeName} </span>, Bangladesh</h1>
+                         <p class="lg:font-light mt-3 lg:text-start text-center">12/4/2004</p>    
+                        `
+        getIdItem(id).appendChild(div);
+
+        getIdItem('defouldText').classList.add('hidden')
+}
+//createElements

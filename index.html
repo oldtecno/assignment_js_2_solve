@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" id="fullMarkup">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="">
     
 
     <header id="header" class="">
@@ -38,6 +38,20 @@
 
 
     <main>
+
+    <!-- Successful alert -->
+      <section>
+        <div class="flex justify-center items-center h-80">
+          <div>
+            <h1>Successful</h1>
+            <img src="./assets/coin.png" alt="BDT">
+            <button id="donateBtnEfect" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Donate</button>
+          </div>
+        </div>
+      </section>
+    <!-- Successful alert -->
+
+
         <!-- donate page -->
         <section id="DonationSection" class="">
             <section class="">
@@ -146,15 +160,20 @@
     </header>
 
 
-            <section class="w-[80%] mx-auto ">
+            <section class="w-[80%] mx-auto">
                     <section class="mt-[120px] flex gap-10 justify-center items-center">
                         <button id="donateBtnEfect" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Donate</button>
                         <button id="histryBtnEfect" class="bg-[#69ff24] hover:bg-[#9bff6c] text-black mt-5 lg:font-bold lg:text-lg border-none w-fit btn btn-primary px-9">Histry</button>
                     </section>
-    
-                    <div class="mt-10 p-5 border-2 border-gray-200 rounded-lg">
-                        <h1 class="lg:text-xl font-semibold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
-                        <p class="lg:font-light mt-3 lg:text-start text-center">12/4/2004</p>
+
+                    <div id="defouldText" class="flex items-center justify-center h-80">
+                        <div>
+                          <h1 class="font-extralight text-2xl border-b-2">NO any histry</h1>
+                        </div>
+                    </div>
+
+                    <div id="donateHistryCards">
+                      
                     </div>
             </section>
         </section>
