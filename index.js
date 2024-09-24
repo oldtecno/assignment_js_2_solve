@@ -19,20 +19,12 @@ getIdItem('histryBtnEfect').addEventListener('click', function (e) {
 // 
 
 
-
-
-
-
-
-
+//store
 getIdItem('noakhaliDonateBtn').addEventListener('click', function (e) {
     const amount = getInputNumberValue('noakhaliDonateValue');
     localStorage.setItem('amount', amount)  
 })
-
-
-
-
+//store
 
 
 // btn1

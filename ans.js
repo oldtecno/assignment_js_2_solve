@@ -17,10 +17,6 @@ getIdItem('phoneBlogBtn').addEventListener('click',function (e) {
 });
 
 
-
-
-
-
 // block btn hidden
 const valueitems = getIdItem('curentBalance');
 const value = Number(valueitems.innerText);
@@ -28,3 +24,10 @@ const amount = Number(localStorage.getItem('amount'));
 const ans = value - amount
 valueitems.innerText= ans;
 // block btn hidden
+
+
+const blockBalances = Number(getIdItem('blockBalances').innerHTML);
+const blockBalancesvalu = Number(localStorage.getItem('amount'));
+blockBalances.innerHTML=blockBalances-blockBalancesvalu;
+console.log(blockBalances.innerHTML=blockBalances-blockBalancesvalu);
+
