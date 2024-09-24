@@ -27,7 +27,7 @@ getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
     const donateAmount = getInputNumberValue('noakhaliDonateValue');    
     const reserve = Number(getIdItem('noakhaliReserve').innerText);
 
-
+    
     if(typeof donateAmount === 'number' && donateAmount <= curentBalance && donateAmount > 0){
 
         const total = (donateAmount + reserve);
@@ -113,12 +113,39 @@ getIdItem('donateQuotaBtn').addEventListener('click' ,function (e) {
 
 
 
-
-
-
 // Successful alert
 getIdItem('successfulBtn').addEventListener('click', function (e) {
     getIdItem('SuccessfulAlert').classList.add('hidden');
     getIdItem('blur').classList.remove('blur-sm');
 });
 // Successful alert
+
+
+
+
+// go blog phone
+getIdItem('phoneBlog').addEventListener('click',function (e) {
+    window.location.href="./ans.html"    
+});
+// go blog phone
+
+
+// go hidden blog phone
+getIdItem('hiddenPhoneBlog').addEventListener('click',function (e) {
+    window.location.href="./ans.html"    
+});
+// go hidden blog phone
+
+
+// go blog
+getIdItem('blogBtn').addEventListener('click',function (e) {
+    window.location.href="./ans.html"    
+});
+// go blog
+
+
+// go blog
+getIdItem('histryBlogBtn').addEventListener('click', function (e) {
+    window.location.href="./ans.html";   
+});
+// go blog

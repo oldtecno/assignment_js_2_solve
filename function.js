@@ -25,12 +25,18 @@ function getInputNumberValue(id) {
 
 //createElements
 function createElements(id, donateAmount, placeName) {
+    const day = new Date().getDate();
+    let mongth = new Date().getMonth();
+    mongth+=1;
+    const years = new Date().getFullYear();
+    const hours = new Date().getHours();
+    const minit = new Date().getMinutes();
 
     const div = document.createElement('div');
     div.classList.add('mt-5', 'p-5', 'rounded-lg', 'bg-white');
     div.innerHTML=`
                          <h1 class="lg:text-xl font-semibold"> <span class="text-black font-bold">${donateAmount}</span>  Taka is Donated for famine-2024 at <span class="text-black font-bold">${placeName} </span>, Bangladesh</h1>
-                         <p class="lg:font-light mt-3 lg:text-start text-center">12/4/2004</p>    
+                         <div class="flex lg:gap-4 gap-2 items-center"> <p class="lg:font-light mt-3 text-lg lg:text-start text-center"> ${day}/${mongth}/${years}  <p class="lg:font-light mt-3 text-lg lg:text-start text-center"> Time: ${hours}:${minit} </p> </p> </div>   
                         `
         getIdItem(id).appendChild(div);
 
