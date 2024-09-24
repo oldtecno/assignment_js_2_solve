@@ -21,15 +21,29 @@ getIdItem('histryBtnEfect').addEventListener('click', function (e) {
 
 
 
+
+
+
+
+getIdItem('noakhaliDonateBtn').addEventListener('click', function (e) {
+    const amount = getInputNumberValue('noakhaliDonateValue');
+    localStorage.setItem('amount', amount)  
+})
+
+
+
+
+
+
 // btn1
 getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
     const curentBalance = Number(getIdItem('curentBalance').innerText);
-    const donateAmount = getInputNumberValue('noakhaliDonateValue');    
+    const donateAmount = getInputNumberValue('noakhaliDonateValue');   
     const reserve = Number(getIdItem('noakhaliReserve').innerText);
 
     
     if(typeof donateAmount === 'number' && donateAmount <= curentBalance && donateAmount > 0){
-
+        
         const total = (donateAmount + reserve);
         getIdItem('noakhaliReserve').textContent= total;
         getIdItem('curentBalance').textContent=(curentBalance - donateAmount);

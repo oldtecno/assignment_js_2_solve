@@ -43,3 +43,4 @@ function createElements(id, donateAmount, placeName) {
         getIdItem('defouldText').classList.add('hidden')
 }
 //createElements
+
