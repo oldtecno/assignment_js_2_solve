@@ -5,29 +5,24 @@ function getIdItem(id){
 //normal id get
 
 
-// block btn
+// home btn
 getIdItem('homeBtn').addEventListener('click',function (e) {
-    window.location.href="./index.html"    
+    window.location.href="./index.html"   
 });
-// block btn
+// home btn
 
-// block btn hidden
+
+// home btn phone
 getIdItem('phoneBlogBtn').addEventListener('click',function (e) {
     window.location.href="./index.html"    
 });
+// home btn phone
 
+ 
+// block BDT update
+    const update = localStorage.getItem('updateCurentBalance');
+    const curentBalance = getIdItem('curentBalance').innerText = update;
+    const blockBalances = getIdItem('blockBalances').innerText = update;
+// // block BDT update
 
-// block btn hidden
-const valueitems = getIdItem('curentBalance');
-const value = Number(valueitems.innerText);
-const amount = Number(localStorage.getItem('amount'));
-const ans = value - amount
-valueitems.innerText= ans;
-// block btn hidden
-
-
-const blockBalances = Number(getIdItem('blockBalances').innerHTML);
-const blockBalancesvalu = Number(localStorage.getItem('amount'));
-blockBalances.innerHTML=blockBalances-blockBalancesvalu;
-console.log(blockBalances.innerHTML=blockBalances-blockBalancesvalu);
 

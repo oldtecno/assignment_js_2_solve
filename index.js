@@ -19,12 +19,21 @@ getIdItem('histryBtnEfect').addEventListener('click', function (e) {
 // 
 
 
-//store
+//value Storage
 getIdItem('noakhaliDonateBtn').addEventListener('click', function (e) {
     const amount = getInputNumberValue('noakhaliDonateValue');
     localStorage.setItem('amount', amount)  
-})
-//store
+});
+getIdItem('donateFeniBtn').addEventListener('click', function (e) {
+    const amount = getInputNumberValue('feniDonateValue');
+    localStorage.setItem('amount', amount)  
+});
+getIdItem('donateQuotaBtn').addEventListener('click', function (e) {
+    const amount = getInputNumberValue('quotaDonateValue');
+    localStorage.setItem('amount', amount)  
+});
+//value Storage
+
 
 
 // btn1
@@ -38,8 +47,13 @@ getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
         
         const total = (donateAmount + reserve);
         getIdItem('noakhaliReserve').textContent= total;
-        getIdItem('curentBalance').textContent=(curentBalance - donateAmount);
+        const updateCurentBalance = getIdItem('curentBalance').textContent=(curentBalance - donateAmount);//
         getIdItem('histryInbalance').textContent=(curentBalance - donateAmount);
+
+        if (updateCurentBalance < curentBalance) {
+            localStorage.setItem('updateCurentBalance', updateCurentBalance);
+        };
+
         getIdItem('histrycurentBalanceForPhone').textContent=(curentBalance - donateAmount);
         getIdItem('curentBalanceForPhone').textContent=(curentBalance - donateAmount);
         getIdItem('noakhaliDonateValue').value='';
@@ -49,9 +63,12 @@ getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
         getIdItem('SuccessfulAlert').classList.remove('hidden');
         getIdItem('blur').classList.add('blur-sm');
     }
-    else{
+    else{   
+        const updateCurentBalance = curentBalance;
+        localStorage.setItem('updateCurentBalance', updateCurentBalance);
+     
         alert('Opps! Somthing is wrong');
-    }
+    };
 });
 //btn1
 
@@ -68,7 +85,12 @@ getIdItem('donateFeniBtn').addEventListener('click' ,function (e) {
         const total = (donateAmount + reserve);
 
         getIdItem('feniReserve').textContent= total;
-        getIdItem('curentBalance').textContent=(curentBalance - donateAmount);
+        const updateCurentBalance = getIdItem('curentBalance').textContent=(curentBalance - donateAmount);
+
+        if (updateCurentBalance < curentBalance) {
+            localStorage.setItem('updateCurentBalance', updateCurentBalance);
+        };
+
         getIdItem('histryInbalance').textContent=(curentBalance - donateAmount);
         getIdItem('histrycurentBalanceForPhone').textContent=(curentBalance - donateAmount);
         getIdItem('curentBalanceForPhone').textContent=(curentBalance - donateAmount);
@@ -80,6 +102,8 @@ getIdItem('donateFeniBtn').addEventListener('click' ,function (e) {
         getIdItem('blur').classList.add('blur-sm');
     }
     else{
+        const updateCurentBalance = curentBalance;
+        localStorage.setItem('updateCurentBalance', updateCurentBalance);
         alert('Opps! Somthing is wrong');
     }
 });
@@ -98,7 +122,12 @@ getIdItem('donateQuotaBtn').addEventListener('click' ,function (e) {
         const total = (donateAmount + reserve);
 
         getIdItem('quotaReserve').textContent= total;
-        getIdItem('curentBalance').textContent=(curentBalance - donateAmount);
+        const updateCurentBalance = getIdItem('curentBalance').textContent=(curentBalance - donateAmount);
+        
+        if (updateCurentBalance < curentBalance) {
+            localStorage.setItem('updateCurentBalance', updateCurentBalance);
+        };
+
         getIdItem('histryInbalance').textContent=(curentBalance - donateAmount);
         getIdItem('histrycurentBalanceForPhone').textContent=(curentBalance - donateAmount);
         getIdItem('curentBalanceForPhone').textContent=(curentBalance - donateAmount);
@@ -111,6 +140,8 @@ getIdItem('donateQuotaBtn').addEventListener('click' ,function (e) {
 
     }
     else{
+        const updateCurentBalance = curentBalance;
+        localStorage.setItem('updateCurentBalance', updateCurentBalance);
         alert('Opps! Somthing is wrong');
     }
 });
