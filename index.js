@@ -43,7 +43,7 @@ getIdItem('noakhaliDonateBtn').addEventListener('click' ,function (e) {
     const reserve = Number(getIdItem('noakhaliReserve').innerText);
 
     
-    if(typeof donateAmount === 'number' && donateAmount <= curentBalance && donateAmount > 0){
+    if(typeof donateAmount === 'number' && donateAmount <= curentBalance && donateAmount > 0 && donateAmount !== parseFloat(donateAmount)){
         
         const total = (donateAmount + reserve);
         getIdItem('noakhaliReserve').textContent= total;
